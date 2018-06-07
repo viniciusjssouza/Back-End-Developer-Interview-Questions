@@ -51,11 +51,17 @@ Sooner or later I will complete it with the relative answers. Feel free to contr
 * Why are global and static objects evil? Can you show it with a code example?
 
 ** Bugs from mutable global state - a lot of tricky bugs are caused by mutability. Bugs that can be caused by mutation from anywhere in the program are even tricker, as it's often hard to track down the exact cause
+
 ** Poor testability - if you have mutable global state, you will need to configure it for any tests that you write. This makes testing harder (and people being people are therefore less likely to do it!). e.g. in the case of application-wide database credentials, what if one test needs to access a specific test database different from everything else?
+
 ** Inflexibility - what if one part of the code requires one value in the global state, but another part requires another value (e.g. a temporary value during a transaction)? You suddenly have a nasty bit of refactoring on your hands
+
 ** Function impurity - "pure" functions (i.e. ones where the result depends only on the input parameters and have no side effects) are much easier to reason about and compose to build larger programs. Functions that read or manipulate mutable global state are inherently impure.
+
 ** Code comprehension - code behaviour that depends on a lot of mutable global variables is much trickier to understand - you need to understand the range of possible interactions with the global variable before you can reason about the behaviour of the code. In some situations, this problem can become intractable.
+
 ** Concurrency issues - mutable global state typically requires some form of locking when used in a concurrent situation. This is very hard to get right (is a cause of bugs) and adds considerably more complexity to your code (hard/expensive to maintain).
+
 ** Performance - multiple threads continually bashing on the same global state causes cache contention and will slow down your system overall.
 
 * Tell me about Inversion of Control and how does it improve the design of code.
