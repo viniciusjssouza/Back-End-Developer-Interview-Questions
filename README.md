@@ -49,6 +49,7 @@ Sooner or later I will complete it with the relative answers. Feel free to contr
 ### [[↑]](#toc) <a name='patterns'>Questions about Design Patterns:</a>
 
 * Why are global and static objects evil? Can you show it with a code example?
+
 ** Bugs from mutable global state - a lot of tricky bugs are caused by mutability. Bugs that can be caused by mutation from anywhere in the program are even tricker, as it's often hard to track down the exact cause
 ** Poor testability - if you have mutable global state, you will need to configure it for any tests that you write. This makes testing harder (and people being people are therefore less likely to do it!). e.g. in the case of application-wide database credentials, what if one test needs to access a specific test database different from everything else?
 ** Inflexibility - what if one part of the code requires one value in the global state, but another part requires another value (e.g. a temporary value during a transaction)? You suddenly have a nasty bit of refactoring on your hands
