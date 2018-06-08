@@ -65,6 +65,7 @@ Concurrency issues - mutable global state typically requires some form of lockin
 Performance - multiple threads continually bashing on the same global state causes cache contention and will slow down your system overall.
 
 * **Tell me about Inversion of Control and how does it improve the design of code.**
+
 It extracts the responsability of instantiating a dependency from the classes, making possible to center this responsability on a single component. It also makes testing easier, once you can provide mocks instead of the real objects. The consumer class does not need to know which class to use, **reducing the coupling** between the classes.
 
 * The Law of Demeter (the Principle of Least Knowledge) states that each unit should have only limited knowledge about other units and it should only talk to its immediate friends (sometimes stated as "Don't talk to strangers"). Would you write code violating this principle, show why it is a bad design and then fix it?
