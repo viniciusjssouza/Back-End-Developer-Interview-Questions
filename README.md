@@ -64,7 +64,9 @@ Concurrency issues - mutable global state typically requires some form of lockin
 
 Performance - multiple threads continually bashing on the same global state causes cache contention and will slow down your system overall.
 
-* Tell me about Inversion of Control and how does it improve the design of code.
+* **Tell me about Inversion of Control and how does it improve the design of code.**
+It extracts the responsability of instantiating a dependency from the classes, making possible to center this responsability on a single component. It also makes testing easier, once you can provide mocks instead of the real objects. The consumer class does not need to know which class to use, **reducing the coupling** between the classes.
+
 * The Law of Demeter (the Principle of Least Knowledge) states that each unit should have only limited knowledge about other units and it should only talk to its immediate friends (sometimes stated as "Don't talk to strangers"). Would you write code violating this principle, show why it is a bad design and then fix it?
 * Active-Record is the design pattern that promotes objects to include functions such as Insert, Update, and Delete, and properties that correspond to the columns in some underlying database table. In your opinion and experience, which are the limits and pitfalls of the this pattern?
 * Data-Mapper is a design pattern that promotes the use of a layer of Mappers that moves data between objects and a database while keeping them independent of each other and the mapper itself. On the contrary, in Active-Record objects directly incorporate operations for persisting themselves to a database, and properties corresponding to the underlying database tables. Do you have an opinion on those patterns? When would you use one against the other?
