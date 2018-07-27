@@ -70,7 +70,7 @@ It extracts the responsability of instantiating a dependency from the classes, m
 
 * **The Law of Demeter (the Principle of Least Knowledge) states that each unit should have only limited knowledge about other units and it should only talk to its immediate friends (sometimes stated as "Don't talk to strangers"). Would you write code violating this principle, show why it is a bad design and then fix it?**
 
-Law of Demeter says that a method should call other methods on only three types of objetecs:
+Law of Demeter says that a method should call other methods on only three types of objects:
  - One of your parameters;
  - A instance variable
  - A local variable;
