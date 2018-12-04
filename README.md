@@ -89,6 +89,7 @@ Active-Record pattern is bad because it encourages developers to mix many respon
 I prefer the data-mapper approach because it generates more cohesive components, with a single resposability: interfacing with an I/O device, the database;
 
 * **Why it is often said that the introduction of `null` is a "Billion dollar mistake"? Would you discuss the techniques to avoid it, such as the Null Object Pattern introduced by the GOF book, or Option types?**
+
 Null is problematic because it only raise generic errors, when not handled correctly. Usually, you cannot call methods on null variables. Also, usually, is not clear that a method may return null under some situations. On the other hand, patterns like Null Object return real objects which can receive calls without resulting in errors. As null is a special case, code from every part has to handle it.
 
 * Many state that, in Object-Oriented Programming, Composition is often a better option than Inheritance. What's you opinion?
