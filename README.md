@@ -84,8 +84,13 @@ It's bad because it can increase the dependency net of your classes, making them
 
 Active-Record pattern is bad because it encourages developers to mix many responsabilities inside a single component. The same class may contain code for business logic (as an entity) a may contain code for accessing the underlying storage. This violates the Single Responsability Principle, which says a class should have only one reason to change. In this case, the class end up having at least two: the business logic and data access. 
 
-* Data-Mapper is a design pattern that promotes the use of a layer of Mappers that moves data between objects and a database while keeping them independent of each other and the mapper itself. On the contrary, in Active-Record objects directly incorporate operations for persisting themselves to a database, and properties corresponding to the underlying database tables. Do you have an opinion on those patterns? When would you use one against the other?
-* Why it is often said that the introduction of `null` is a "Billion dollar mistake"? Would you discuss the techniques to avoid it, such as the Null Object Pattern introduced by the GOF book, or Option types?
+* **Data-Mapper is a design pattern that promotes the use of a layer of Mappers that moves data between objects and a database while keeping them independent of each other and the mapper itself. On the contrary, in Active-Record objects directly incorporate operations for persisting themselves to a database, and properties corresponding to the underlying database tables. Do you have an opinion on those patterns? When would you use one against the other?**
+
+I prefer the data-mapper approach because it generates more cohesive components, with a single resposability: interfacing with an I/O device, the database;
+
+* **Why it is often said that the introduction of `null` is a "Billion dollar mistake"? Would you discuss the techniques to avoid it, such as the Null Object Pattern introduced by the GOF book, or Option types?**
+Null is problematic because it only raise generic errors, when not handled correctly. Usually, you cannot call methods on null variables. Also, usually, is not clear that a method may return null under some situations. On the other hand, patterns like Null Object return real objects which can receive calls without resulting in errors. As null is a special case, code from every part has to handle it.
+
 * Many state that, in Object-Oriented Programming, Composition is often a better option than Inheritance. What's you opinion?
 * What is an Anti-corruption Layer?
 * Singleton is a design pattern that restricts the instantiation of a class to one single object. Writing a Thread-Safe Singleton class is not so obvious. Would you try?
