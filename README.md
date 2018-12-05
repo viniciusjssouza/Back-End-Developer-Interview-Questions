@@ -92,7 +92,10 @@ I prefer the data-mapper approach because it generates more cohesive components,
 
 Null is problematic because it only raise generic errors, when not handled correctly. Usually, you cannot call methods on null variables. Also, usually, is not clear that a method may return null under some situations. As null is a special case, code from every part has to handle it. On the other hand, patterns like Null Object return real objects which can receive calls without resulting in errors. Also Null Object is a type, so it is explicit: the developer will recognize that a method may return something considered "empty" or "no value".
 
-* Many state that, in Object-Oriented Programming, Composition is often a better option than Inheritance. What's you opinion?
+* **Many state that, in Object-Oriented Programming, Composition is often a better option than Inheritance. What's you opinion?**
+
+I don't think so. I believe that inheritance is bad only when overused. Inheritance should be used when it makes sense: when you have a relation of "is-a". One of the problems with inheritance is that you can only inherit from one parent class, which restricts the possibilities.
+
 * What is an Anti-corruption Layer?
 * Singleton is a design pattern that restricts the instantiation of a class to one single object. Writing a Thread-Safe Singleton class is not so obvious. Would you try?
 * The ability to change implementation without affecting clients is called Data Abstraction. Produce and example violating this property, then fix it.
