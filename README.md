@@ -96,7 +96,10 @@ Null is problematic because it only raise generic errors, when not handled corre
 
 I don't think so. I believe that inheritance is bad only when overused. Inheritance should be used when it makes sense: when you have a relation of "is-a". One of the problems with inheritance is that you can only inherit from one parent class, which restricts the possibilities.
 
-* What is an Anti-corruption Layer?
+* **What is an Anti-corruption Layer?**
+A Anti-corruption Layer (ACL) is a layer which decouples your model from extenal or legacy models. It was suggested/created by Eric Evans in the DDD book, as a way to make your model/bounded context indepenent from external changes, protecting it.
+
+
 * Singleton is a design pattern that restricts the instantiation of a class to one single object. Writing a Thread-Safe Singleton class is not so obvious. Would you try?
 * The ability to change implementation without affecting clients is called Data Abstraction. Produce and example violating this property, then fix it.
 * Write a snippet of code violating the Don't Repeat Yourself (DRY) principle. Then, fix it.
