@@ -98,7 +98,7 @@ I don't think so. I believe that inheritance is bad only when overused. Inherita
 
 * **What is an Anti-corruption Layer?**
 
-A Anti-corruption Layer (ACL) is a layer which decouples your model from extenal or legacy models. It was suggested/created by Eric Evans in the DDD book, as a way to make your model/bounded context indepenent from external changes, protecting it.
+An Anti-corruption Layer (ACL) is a layer which decouples your model from extenal or legacy models. It was suggested/created by Eric Evans in the DDD book, as a way to make your model/bounded context indepenent from external changes, protecting it.
 
 
 * Singleton is a design pattern that restricts the instantiation of a class to one single object. Writing a Thread-Safe Singleton class is not so obvious. Would you try?
