@@ -101,7 +101,14 @@ I don't think so. I believe that inheritance is bad only when overused. Inherita
 An Anti-corruption Layer (ACL) is a layer which decouples your model from extenal or legacy models. It was suggested/created by Eric Evans in the DDD book, as a way to make your model/bounded context indepenent from external changes, protecting it.
 
 
-* Singleton is a design pattern that restricts the instantiation of a class to one single object. Writing a Thread-Safe Singleton class is not so obvious. Would you try?
+* **Singleton is a design pattern that restricts the instantiation of a class to one single object. Writing a Thread-Safe Singleton class is not so obvious. Would you try?**
+
+Eager initialization is easy to implement but it may cause resource and CPU time wastage. Use it only if cost of initializing a class is less in terms of resources or your program will always need the instance of class.
+By using Static block in Eager initialization we can provide exception handling and also can control over instance.
+Using synchronized we can create singleton class in multi-threading environment also but it can cause slow performance, so we can use Double check locking mechanism.
+Bill Pugh implementation is most widely used approach for singleton classes. Most developers prefer it because of its simplicity and advantages.
+
+
 * The ability to change implementation without affecting clients is called Data Abstraction. Produce and example violating this property, then fix it.
 * Write a snippet of code violating the Don't Repeat Yourself (DRY) principle. Then, fix it.
 * How would you deal with Dependency Hell?
