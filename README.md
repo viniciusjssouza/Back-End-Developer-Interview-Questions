@@ -110,9 +110,13 @@ Bill Pugh implementation is most widely used approach for singleton classes. Mos
 
 
 * **Is goto evil? You may have heard of the famous paper "Go To Statement Considered Harmful" by Edsger Dijkstra, in which he criticized the use of the `goto` statement and advocated structured programming instead. The use of `goto` has always been controversial, so much that even Dijkstra's letter was criticized with articles such as "'GOTO Considered Harmful' Considered Harmful". What's your opinion on the use of `goto`?**
+
 It's harder to reason about a code using goto because it can change the execution flow in a non-intuitive way. Besides, it makes the code less modularized and harder to understand, lowering its quality.
 
-* The robustness principle is a general design guideline for software that recommends "*Be conservative in what you send, be liberal in what you accept*". It is often reworded as "*Be a tolerant reader and a careful writer*". Would you like to discuss the rationale of this principle?
+* **The robustness principle is a general design guideline for software that recommends "*Be conservative in what you send, be liberal in what you accept*". It is often reworded as "*Be a tolerant reader and a careful writer*". Would you like to discuss the rationale of this principle?**
+
+The basic idea behind the Robustiness Principle is that your application should consider/handle several cases/kinds of input, once the world is crazy and you can receive dangerous data. On the otherside, while communicating with other applications, you should be restrict and use only the protocol/contract defined by the provider. This principle makes your application more tolerant and reliable.
+
 * Separation of Concerns is a design principle for separating a computer program into distinct areas, each of ones addressing a separate concern. There are a lot of different mechanisms for achieving Separation of Concerns (use of objects, functions, modules, or patterns such as MVC and the like). Would you discuss this topic?
 
 
