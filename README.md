@@ -117,8 +117,9 @@ It's harder to reason about a code using goto because it can change the executio
 
 The basic idea behind the Robustiness Principle is that your application should consider/handle several cases/kinds of input, once the world is crazy and you can receive dangerous data. On the otherside, while communicating with other applications, you should be restrict and use only the protocol/contract defined by the provider. This principle makes your application more tolerant and reliable.
 
-* Separation of Concerns is a design principle for separating a computer program into distinct areas, each of ones addressing a separate concern. There are a lot of different mechanisms for achieving Separation of Concerns (use of objects, functions, modules, or patterns such as MVC and the like). Would you discuss this topic?
+* **Separation of Concerns is a design principle for separating a computer program into distinct areas, each of ones addressing a separate concern. There are a lot of different mechanisms for achieving Separation of Concerns (use of objects, functions, modules, or patterns such as MVC and the like). Would you discuss this topic?**
 
+Separate the concerns is to break a program into modules, which are loosely coupled, in order to make it more managable and easier to maintain, reducing the complexity.   
 
 ### [[↑]](#toc) <a name='design'>Questions about Code Design:</a>
 
